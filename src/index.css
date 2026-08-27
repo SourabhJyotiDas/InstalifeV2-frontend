@@ -1,0 +1,93 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    @apply bg-[#FAF7F2] text-slate-900 antialiased font-sans transition-colors duration-200;
+  }
+}
+
+/* Neo-brutalist custom utilities */
+.neo-box {
+  @apply bg-white border-2 border-slate-900 shadow-[3px_3px_0px_0px_#000] rounded-2xl;
+}
+
+.neo-btn {
+  @apply bg-[#FF5A5F] hover:bg-[#ff4348] text-white border-2 border-slate-900 shadow-[2px_2px_0px_0px_#000] active:translate-x-[1px] active:translate-y-[1px] active:shadow-none transition-all duration-150 font-bold rounded-xl;
+}
+
+.neo-btn-secondary {
+  @apply bg-white hover:bg-slate-100 text-slate-900 border-2 border-slate-900 shadow-[2px_2px_0px_0px_#000] active:translate-x-[1px] active:translate-y-[1px] active:shadow-none transition-all duration-150 font-semibold rounded-xl;
+}
+
+.neo-input {
+  @apply bg-white border-2 border-slate-900 rounded-xl text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-[#FF5A5F] transition-all;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-slate-300 rounded-full;
+}
+
+/* Swiper Carousel Styling - Small Arrows */
+.neo-swiper .swiper-button-next,
+.neo-swiper .swiper-button-prev {
+  color: #ffffff !important;
+  background-color: rgba(15, 23, 42, 0.85);
+  width: 26px !important;
+  height: 26px !important;
+  border-radius: 50%;
+  border: 1.5px solid rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(4px);
+  transition: all 0.15s ease;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+}
+
+.neo-swiper .swiper-button-next {
+  right: 16px !important;
+}
+
+.neo-swiper .swiper-button-prev {
+  left: 16px !important;
+}
+
+.neo-swiper .swiper-button-next:after,
+.neo-swiper .swiper-button-prev:after {
+  font-size: 10px !important;
+  font-weight: 900;
+}
+
+.neo-swiper .swiper-button-next:hover,
+.neo-swiper .swiper-button-prev:hover {
+  background-color: #FF5A5F !important;
+  transform: translateY(-50%) scale(1.15) !important;
+}
+
+.neo-swiper .swiper-pagination-bullet {
+  background: #ffffff !important;
+  opacity: 0.6;
+  width: 6px !important;
+  height: 6px !important;
+}
+
+.neo-swiper .swiper-pagination-bullet-active {
+  background: #FF5A5F !important;
+  opacity: 1;
+  width: 14px !important;
+  border-radius: 6px !important;
+}
+
+@keyframes toastProgress {
+  from {
+    width: 100%;
+  }
+  to {
+    width: 0%;
+  }
+}
